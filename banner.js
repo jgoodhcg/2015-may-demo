@@ -7,7 +7,9 @@ require([], function(){
 	// setup webgl renderer full page
 	var renderer	= new THREE.WebGLRenderer();
     var CANVAS_WIDTH = $("#banner").width(), CANVAS_HEIGHT = $("#banner").height(); 
-	renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
+	console.log($("#banner").width());
+	console.log($("#banner").height());
+    	renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
     var gbox = document.getElementById('banner');
     var pauseAnim = false;
     //document.body.appendChild(gbox);
