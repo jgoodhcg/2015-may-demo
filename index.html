@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<script src="vendor/require.js/require.js"></script>
 <script src="vendor/three.js/examples/js/Detector.js"></script>
 <script src="vendor/threex.windowresize.js"></script>
 <script src="jquery-1.11.3.min.js"></script>
 <script src="three.min.js"></script>
 <script src="cannon.min.js"></script>
-
+<script src="shapes/cone.js"></script>
+<script src="models/Wheel.js"></script>
+<script src="models/SwingArm.js"></script>
+<script src="models/SwingFrame.js"></script>
+<script src="models/Ball.js"></script>
+<script src="models/Wires.js"></script>
+<script src="models/CradleFrame.js"></script>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="models/Table.js"></script>
+<script src="models/Ball.js"></script>
+<script src="models/Cue.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="models/CornerPocketPoint.js"></script>
+<script src="collider/threex.collider.js"></script>
+<script src="collider/threex.colliderhelper.js"></script>
+<script src="collider/threex.collidersystem.js"></script>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -97,15 +111,14 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <!-- Buffer between proj & nav bar TODO: get centered and meaningful -->
+      <div id="quote" class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" height="140" width="140">
-          <h2>"Makin a website"</h2>
+         <h2>"Makin a website"</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor 
 ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus 
 sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor 
 mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -120,8 +133,10 @@ mauris condimentum nibh.</p>
           <p class="lead">fix:texture loading, weird time dependent motion</p>
         </div>
         <div class="col-md-5">
-          <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE5MC41IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjNwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj41MDB4NTAwPC90ZXh0PjwvZz48L3N2Zz4=" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500">
-        </div>
+        	<div id="graphicsbox1">
+		</div>
+
+	</div>
       </div>
 
       <hr class="featurette-divider">
@@ -165,8 +180,8 @@ mauris condimentum nibh.</p>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="index_files/jquery.js"></script>
     <script src="index_files/bootstrap.js"></script>
+<script src="proj1.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="index_files/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
