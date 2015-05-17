@@ -25,12 +25,14 @@ body {
 	width: 100%;
 	z-index: 20;
 }
-
-.nav-icon {
-	text-align: center;
+.nav-icons {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
-.nav-icon:hover{
-	border: 1px solid white;
+.nav-icons:hover{
+	border-bottom: 1px solid white;
 	cursor: pointer;
 }
 /* Flip around the padding for proper display in narrow viewports */
