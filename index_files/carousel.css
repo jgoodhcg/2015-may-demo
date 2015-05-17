@@ -110,6 +110,10 @@ body {
   letter-spacing: -1px;
 }
 
+.proj-img {
+	width: 100%;
+	height: auto;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
