@@ -6,7 +6,8 @@
 	} 
 	// setup webgl renderer full page
 	var renderer	= new THREE.WebGLRenderer();
-    var gbox = document.getElementById('graphicsbox1');
+	renderer.autoClear = false;
+    	var gbox = document.getElementById('graphicsbox1');
      var gboxWidth = $("#graphicsbox1").width();
      console.log(gboxWidth);
      var CANVAS_WIDTH = gboxWidth, CANVAS_HEIGHT = gboxWidth * (9/16);

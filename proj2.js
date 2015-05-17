@@ -6,6 +6,7 @@
 	} 
 	// setup webgl renderer full page
 	var renderer2	= new THREE.WebGLRenderer({ antialias: true });
+	renderer2.autoClear = false;
     var gbox2 = document.getElementById('graphicsbox2');
      var gbox2Width = $("#graphicsbox2").width();
      console.log(gbox2Width);
