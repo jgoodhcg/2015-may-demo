@@ -27,11 +27,11 @@ body {
 }
 
 .nav-icon {
-    width: 40px; 
-    height: auto;
-    overflow: visible;
-    padding-top: 0;
-    padding-bottom: 0; 
+	text-align: center;
+}
+.nav-icon:hover{
+	border: 1px solid white;
+	cursor: pointer;
 }
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
@@ -78,7 +78,9 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-
+.marketing {
+	text-align: center;
+}
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;

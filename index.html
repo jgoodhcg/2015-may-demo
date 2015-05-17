@@ -44,27 +44,29 @@
 
 	<!-- NAVBAR
 	================================================== -->
-      <div class="container nav-affix" data-spy="affix" data-offset-top="500" data-offset-bottom="50" >
-		 
+      <div class="container nav-affix" data-spy="affix" data-offset-top="500" data-offset-bottom="200">
+
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
-            
             <div class="navbar-header">
-      		<a class="navbar-brand" href="#">Project name</a>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-icons" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
             </div>
-          
-	    <div class="navbar-collapse collapse">
-		    <ul class="nav navbar-nav">
-			    <li><a class="nav-icon" href="#"><img src="images/github.png" class="img-circle" width="32" height="32" /></a></li>
-			    <li><a class="nav-icon" href="#"><img src="images/bitbucket.png" class="img-circle" width="64" height="64" /></a></li>	
-			    <li><a class="nav-icon" href="#"><img src="images/linked_in.png" class="img-circle" width="128" height="128" /></a></li>
-		    </ul>
-	    </div>
-    	  </div>
+            <div id="navbar-icons" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a class="nav-icon" href="http://github.com/jgoodhcg"><img src="images/github.png"  width="64" height="64" /></a></li>	
+                <li><a class="nav-icon" href="http://bitbucket.org/jgoodhcg"><img src="images/bitbucket.png"  width="64" height="64" /></a></li>	
+                <li><a class="nav-icon" href="http://linkedin.com/in/jgoodhcg"><img src="images/linked_in.png"  width="64" height="64" /></a></li>	
+              </ul>
+            </div>
+          </div>
         </nav>
 
-</div> <!-- navbar contianer -->
-
+      </div>
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -75,7 +77,7 @@
       <!-- Three columns of text below the carousel -->
       <!-- Buffer between proj & nav bar TODO: get centered and meaningful -->
       <div id="quote" class="row">
-        <div class="col-lg-4">
+        <div >
          <h2>"Makin a website"</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor 
 ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus 
