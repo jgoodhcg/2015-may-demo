@@ -1,0 +1,71 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Demo Web Page 0.1 - Project 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="index_files/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="index_files/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="index_files/carousel.css" rel="stylesheet">
+  </head>
+ 
+<!DOCTYPE html>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="vendor/three.js/examples/js/Detector.js"></script>
+<script src="vendor/threex.windowresize.js"></script>
+<script src="three.min.js"></script>
+<script src="cannon.min.js"></script>
+<script src="models/Table.js"></script>
+<script src="models/Ball.js"></script>
+<script src="models/Cue.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="models/CornerPocketPoint.js"></script>
+<script src="collider/threex.collider.js"></script>
+<script src="collider/threex.colliderhelper.js"></script>
+<script src="collider/threex.collidersystem.js"></script>
+
+
+<body>
+<h2 class="featurette-heading"> Pool Game. <span class="text-muted"> Three.js for graphics and Cannon.js for physics simulation </span></h2>
+<hr class="featurette-divider">
+<h1 class="featurette-heading">Controls:  </h1>
+<ul>
+    <li> mouse - camera control (click hold and drag orbit controls) </li>
+    <li> 'c' - center camera on cue </li>
+    <li> 't' - center camera on table </li>
+    <li> 'r' - rack balls </li>
+    <li> 'r' - rack balls </li>
+    <li> 'w,a,s,d' - move cue </li>
+</ul>
+
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+			<div id="graphicsbox"></div>
+      </div>
+
+      <hr class="featurette-divider">
+
+
+
+<script src="proj2.js"></script>
+</body>
+
