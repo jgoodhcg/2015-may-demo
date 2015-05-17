@@ -26,7 +26,13 @@ body {
 	z-index: 20;
 }
 
-
+.nav-icon {
+    width: 40px; 
+    height: auto;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0; 
+}
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
   padding-right: 0;
