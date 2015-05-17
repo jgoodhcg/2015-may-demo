@@ -11,7 +11,7 @@
      console.log(gboxWidth);
      var CANVAS_WIDTH = gboxWidth, CANVAS_HEIGHT = gboxWidth * (9/16);
 	renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
-    var pauseAnim = false;
+    var pauseAnim = true;
     //document.body.appendChild(gbox);
 	gbox.appendChild( renderer.domElement );
 
@@ -122,13 +122,36 @@
     var ball5 = new NewtBall(bSize, cubemap);
     // var ball5_cf = new THREE.Matrix4();
     // var ball5 = new Ball(bSize, cubemap);
+    
 
     /* dynamic positioning and scene additions */
     string1.add(ball1);
-	string5.add(ball5);
+    string5.add(ball5);
     cradle.add(string1);
-	cradle.add(string5);
+    cradle.add(string5);
     scene.add(cradle);
+	var tran = new THREE.Vector3();
+        var quat = new THREE.Quaternion();
+        var rot = new THREE.Quaternion();
+        var vscale = new THREE.Vector3();
+	
+        ball1_cf.decompose(tran, quat, vscale);
+        ball1.position.copy(tran);
+        ball1.quaternion.copy(quat);
+
+        ball5_cf.decompose(tran, quat, vscale);
+        ball5.position.copy(tran);
+        ball5.quaternion.copy(quat);
+
+
+	string1_cf.decompose (tran, quat, vscale);
+        string1.position.copy(tran);
+        string1.quaternion.copy(quat);
+	
+	string5_cf.decompose (tran, quat, vscale);
+        string5.position.copy(tran);
+        string5.quaternion.copy(quat);
+	
 
     //scene.add(ball5);
     
@@ -177,6 +200,14 @@
 	var prev_angle1 = 0;
 	var prev_angle2 = 0;
 	var turn = true;
+	// window resizing fix
+	onRenderFcts.push( function(){
+		var gbox = document.getElementById('graphicsbox1');
+     		var gboxWidth = $("#graphicsbox1").width();
+    		var CANVAS_WIDTH = gboxWidth, CANVAS_HEIGHT = gboxWidth * (9/16);
+		renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
+    
+	});	
 	onRenderFcts.push(function(delta, now){
         if (pauseAnim) return;
         var tran = new THREE.Vector3();
@@ -189,7 +220,7 @@
         ball1.position.copy(tran);
         ball1.quaternion.copy(quat);
 
-		ball5_cf.multiply(new THREE.Matrix4().makeRotationX(THREE.Math.degToRad(delta * 72)));
+	ball5_cf.multiply(new THREE.Matrix4().makeRotationX(THREE.Math.degToRad(delta * 72)));
         ball5_cf.decompose(tran, quat, vscale);
         ball5.position.copy(tran);
         ball5.quaternion.copy(quat);
