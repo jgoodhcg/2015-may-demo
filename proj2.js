@@ -7,8 +7,8 @@
 	// setup webgl renderer full page
 	var renderer2	= new THREE.WebGLRenderer({ antialias: true });
 	renderer2.autoClear = false;
-    var gbox2 = document.getElementById('graphicsbox2');
-     var gbox2Width = $("#graphicsbox2").width();
+    var gbox2 = document.getElementById('graphicsbox');
+     var gbox2Width = $("#graphicsbox").width();
      console.log(gbox2Width);
      var CANVAS_WIDTH = gbox2Width, CANVAS_HEIGHT = gbox2Width * (9/16);
 	renderer2.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
@@ -493,8 +493,8 @@
 	//////////////////////////////////////////////////////////////////////////////////
 	// window resizing fix
 	onRenderFcts.push( function(){
-		var gbox2 = document.getElementById('graphicsbox2');
-     		var gbox2Width = $("#graphicsbox2").width();
+		var gbox2 = document.getElementById('graphicsbox');
+     		var gbox2Width = $("#graphicsbox").width();
     		var CANVAS_WIDTH = gbox2Width, CANVAS_HEIGHT = gbox2Width * (9/16);
 		renderer2.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
     
