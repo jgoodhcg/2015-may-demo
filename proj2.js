@@ -1,19 +1,18 @@
-require([], function(){
+
 	// detect WebGL
 	if( !Detector.webgl ){
 		Detector.addGetWebGLMessage();
 		throw 'WebGL Not Available'
 	} 
 	// setup webgl renderer full page
-	var renderer	= new THREE.WebGLRenderer({ antialias: true });
-    var CANVAS_WIDTH = 640, CANVAS_HEIGHT = 360;
-	renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
-	renderer.shadowMapEnabled = true;
-	renderer.shadowMapSoft = false;
-    var gbox = document.getElementById('graphicsbox2');
-    var pauseAnim = false;
-    //document.body.appendChild(gbox);
-	gbox.appendChild( renderer.domElement );
+	var renderer2	= new THREE.WebGLRenderer({ antialias: true });
+    var gbox2 = document.getElementById('graphicsbox2');
+     var gbox2Width = $("#graphicsbox2").width();
+     console.log(gbox2Width);
+     var CANVAS_WIDTH = gbox2Width, CANVAS_HEIGHT = gbox2Width * (9/16);
+	renderer2.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
+    //document.body.appendChild(gbox2);
+	gbox2.appendChild( renderer2.domElement );
 	
 
 	// setup a scene and camera
@@ -35,7 +34,7 @@ require([], function(){
 	var onRenderFcts= [];
 
 	// handle window resize events
-	var winResize	= new THREEx.WindowResize(renderer, camera)
+	var winResize	= new THREEx.WindowResize(renderer2, camera)
 
 	//////////////////////////////////////////////////////////////////////////////////
 	//		default 3 points lightning					//
@@ -491,6 +490,15 @@ require([], function(){
     //////////////////////////////////////////////////////////////////////////////////
 	/* game engine */
 	//////////////////////////////////////////////////////////////////////////////////
+	// window resizing fix
+	onRenderFcts.push( function(){
+		var gbox2 = document.getElementById('graphicsbox2');
+     		var gbox2Width = $("#graphicsbox2").width();
+    		var CANVAS_WIDTH = gbox2Width, CANVAS_HEIGHT = gbox2Width * (9/16);
+		renderer2.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
+    
+	});	
+
 	onRenderFcts.push(function(delta, now){
 		updatePhysics();
 
@@ -499,7 +507,7 @@ require([], function(){
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Camera Controls							//
 	//////////////////////////////////////////////////////////////////////////////////
-	controls = new THREE.OrbitControls(camera, renderer.domElement);
+	controls = new THREE.OrbitControls(camera, renderer2.domElement);
 
 	onRenderFcts.push(function(delta, now){
 		controls.update();
@@ -598,7 +606,7 @@ require([], function(){
 	//		render the scene						//
 	//////////////////////////////////////////////////////////////////////////////////
 	onRenderFcts.push(function(){
-		renderer.render( scene, camera );		
+		renderer2.render( scene, camera );		
 	});
 	
 	//////////////////////////////////////////////////////////////////////////////////
@@ -616,5 +624,4 @@ require([], function(){
 		onRenderFcts.forEach(function(f){
 			f(deltaMsec/1000, nowMsec/1000)
 		})
-	})
-});
+	});
