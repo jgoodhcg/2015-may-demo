@@ -6,11 +6,10 @@
 	} 
 	// setup webgl renderer full page
 	var renderer	= new THREE.WebGLRenderer();
-	renderer.autoClear = false;
-    	var gbox = document.getElementById('graphicsbox1');
-     var gboxWidth = $("#graphicsbox1").width();
+    	var gbox = document.getElementById('graphicsbox');
+     var gboxWidth = $("#graphicsbox").width();
      console.log(gboxWidth);
-     var CANVAS_WIDTH = gboxWidth, CANVAS_HEIGHT = gboxWidth * (9/16);
+     var CANVAS_WIDTH = gboxWidth, CANVAS_HEIGHT = gboxWidth* (9/16);
 	renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
     var pauseAnim = true;
     //document.body.appendChild(gbox);
@@ -203,8 +202,8 @@
 	var turn = true;
 	// window resizing fix
 	onRenderFcts.push( function(){
-		var gbox = document.getElementById('graphicsbox1');
-     		var gboxWidth = $("#graphicsbox1").width();
+		var gbox = document.getElementById('graphicsbox');
+     		var gboxWidth = $("#graphicsbox").width();
     		var CANVAS_WIDTH = gboxWidth, CANVAS_HEIGHT = gboxWidth * (9/16);
 		renderer.setSize( CANVAS_WIDTH, CANVAS_HEIGHT );
     
