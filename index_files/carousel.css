@@ -48,10 +48,14 @@ body {
   width: auto;
 }
 
-.profile-pic {
-	
+#navbar-icons {
+	float: right;
 }
-
+.profile-pic {
+	float: left;	
+	margin-top: 15px;
+	margin-left: 15px;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
