@@ -25,6 +25,9 @@ body {
 	width: 100%;
 	z-index: 20;
 }
+.nav-affix.affix #profile-pic{
+	content:url("images/pic-background.png")
+}
 .nav-icons {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -55,6 +58,10 @@ body {
 	float: left;	
 	margin-top: 15px;
 	margin-left: 15px;
+}
+
+#expand-button {
+	float: right;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
